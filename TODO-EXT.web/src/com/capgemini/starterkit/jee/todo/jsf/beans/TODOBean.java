@@ -21,6 +21,14 @@ public class TODOBean {
 	private Date date;
 	private Date currentDate = new Date();
 
+	public void listener(javax.faces.event.ComponentSystemEvent event)
+			throws javax.faces.event.AbortProcessingException {
+		/*
+		 * Refresh current date.
+		 */
+		currentDate = new Date();
+	}
+
 	public Date getDate() {
 		if (date == null) {
 			date = new Date();
